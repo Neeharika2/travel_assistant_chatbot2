@@ -8,8 +8,8 @@ app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
 # API Configuration
-API_KEY = "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"
-MODEL = "deepseek/deepseek-r1-0528-qwen3-8b:free"
+API_KEY = os.getenv("API_KEY")
+MODEL = os.getenv("MODEL")
 ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
 
 # Initialize session variables if they don't exist
